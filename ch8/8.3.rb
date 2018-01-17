@@ -24,3 +24,4 @@ puts wordlist.sort.join(', ')
 
 puts "\n\#\# 8.3b - Table of contents, revisited \#\#\n\n"
 
+# Come back to this when ch.2-7 are caught up, it's a rewrite from chapter 6.2
