@@ -1,23 +1,27 @@
+irb
+
 irb(main):001:0> require './car.rb'
 => true
-irb(main):002:0> mini = Car.new("Mini Cooper")
-You made a new car! A brand-new Mini Cooper!
-=> #<Car:0x000055f6194e9318 @make="Mini Cooper", @speed=0>
-irb(main):003:0> mini.accelerate
+irb(main):002:0> mini = Car.new("Mini Cooper!")
+You made a new car! A brand-new Mini Cooper!!
+=> #<Car:0x000055c1233a78b8 @make="Mini Cooper!", @speed=0>
+irb(main):003:0> mini.gas
 You are going 1 miles per hour
 => nil
-irb(main):004:0> mini.accelerate
+irb(main):004:0> mini.gas
 You are going 2 miles per hour
 => nil
-irb(main):005:0> mini.accelerate
-You are going 3 miles per hour
+irb(main):005:0> mini.brake
+You are going 1 miles per hour
 => nil
-irb(main):006:0> mini.accelerate
-You are going 4 miles per hour
+irb(main):006:0> mini.brake
+You are going 0 miles per hour
 => nil
-irb(main):007:0> mini.accelerate
-You are going 5 miles per hour
+irb(main):007:0> mini.brake
+You are going 0 miles per hour
 => nil
-irb(main):008:0> mini.accelerate
-You are going 6 miles per hour
+irb(main):008:0> mini.how_fast
+You are going 0 miles per hour
+=> nil
+miles per hour
 => nil
