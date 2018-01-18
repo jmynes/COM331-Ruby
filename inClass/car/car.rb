@@ -10,4 +10,10 @@ class Car
     @speed +=1
     puts "You are going #{@speed} miles per hour"
   end
+
+  def brake # rather than wording it as decelerate, let's call it brake
+    # CANNOT @speed-- in Ruby!
+    @speed -=1
+    puts "You are going #{@speed} miles per hour"
+  end
 end
