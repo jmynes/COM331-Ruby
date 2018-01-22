@@ -1,6 +1,10 @@
 #7.5b
 
-while true
+# This would be greatly improved with methods
+
+attempt_to_leave = 0
+
+while attempt_to_leave < 3
   puts 'What would you like to say to Grandma?'
   response = gets.chomp
 
@@ -8,7 +12,10 @@ while true
   if response != response.upcase #&& response != ''
     puts 'HUH?! SPEAK UP, SONNY!'
   elsif response == 'BYE'
-    break
+    attempt_to_leave += 1
+    if attempt_to_leave < 3
+      puts 'HUH?! WHAT DID YOU SAY?!'
+    end
   else
     prng = Random.new
     # Potentially one old Grandma!
