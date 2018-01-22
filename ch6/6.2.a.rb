@@ -1,4 +1,4 @@
-# 6.2
+# 6.2.a
 
 puts 'What would you like to say to IRATE_BOSS?'
 your_reply = gets.chomp
