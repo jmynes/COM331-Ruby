@@ -13,6 +13,11 @@ while bottles_of_beer >= 1
   puts bottles_of_beer.to_s + ' ' + bottle_unit + ' of beer on the wall, ' + bottles_of_beer.to_s + ' ' + bottle_unit + ' of beer!'
   bottles_of_beer -= 1
   puts 'Take one down, pass it around'
+  
+  if bottles_of_beer == 0 
+    bottle_unit = "bottles"
+  end
+  
   puts bottles_of_beer.to_s + ' ' + bottle_unit + ' of beer on the wall!'
   puts
 end
