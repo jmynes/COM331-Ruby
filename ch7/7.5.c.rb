@@ -10,7 +10,7 @@ end_year = gets.chomp.to_i
 
 current_year = start_year
 
-while current_year < end_year
+while current_year <= end_year
   if (current_year % 400 == 0) || (current_year % 4 == 0) && !(current_year % 100 == 0)
     puts "found " + current_year.to_s
   end
