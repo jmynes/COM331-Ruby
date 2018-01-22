@@ -1,5 +1,8 @@
 #7.5
 
+# This works, but could be improved to read and execute better.
+# Lots of ifs in this while loop, I believe some are redundant.
+
 bottles_of_beer = 99
 bottle_unit = "bottles"
 
@@ -17,7 +20,7 @@ while bottles_of_beer >= 1
   if bottles_of_beer == 0 
     bottle_unit = "bottles"
   end
-  
+
   puts bottles_of_beer.to_s + ' ' + bottle_unit + ' of beer on the wall!'
   puts
 end
