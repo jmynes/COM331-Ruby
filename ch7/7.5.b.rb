@@ -12,6 +12,7 @@ while true
   else
     prng = Random.new
     # Potentially one old Grandma!
+    # I could also do this with rand(numberhere) and add it to some base
     puts 'NO, NOT SINCE ' + prng.rand(1740..1940).to_s + '!'
   end
 end
