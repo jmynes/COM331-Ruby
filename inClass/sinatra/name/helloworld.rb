@@ -7,5 +7,5 @@ end
 
 get '/name/:name' do |n|
   @name = n.capitalize
-  erb :name
+  haml :name
 end
