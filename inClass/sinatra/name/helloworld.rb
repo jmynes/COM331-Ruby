@@ -5,7 +5,7 @@ get '/' do
   "Hello World from #{@name}"
 end
 
-get '/name/:name' do
-  "Hello from #{params['name'].capitalize}"
+get '/name/:name' do |n|
+  @name = n.capitalize
   erb :name
 end
