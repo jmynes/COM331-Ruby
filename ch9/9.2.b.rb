@@ -1,4 +1,4 @@
-#9.2a
+#9.2b
 
 def double_this num
   num_times_2 = num*2
