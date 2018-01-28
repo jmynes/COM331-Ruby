@@ -1,5 +1,7 @@
 # 9.0a
 
+puts "\n\#\# 9.0a \#\#\n\n"
+
 # Pine's example of ugly code, lots of repetition.
 
 puts 'Hello, and thank you for taking the time to'
