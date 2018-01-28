@@ -8,7 +8,8 @@ puts "\n\#\# 9.5b \#\#\n\n"
 # However, I'm not sure it accomplishes that goal. It becomes a bit repetitive.
 #
 # I also removed the elsif for cases of exactly 5 of a unit, as these were unecessary for correct printing.
-
+#
+# Lastly, 3000 did not print with their code, mine has been edited for <= 3000
 
 def old_roman_numeral number
 
@@ -46,11 +47,14 @@ def old_roman_numeral number
   puts "#{number} in old-school Roman numerals is "+"#{thousands}"+"#{hundreds}"+"#{tens}"+"#{ones}"
 end
 
-old_roman_numeral 1
-old_roman_numeral 9
-old_roman_numeral 16
-old_roman_numeral 1111
-old_roman_numeral 666
-old_roman_numeral 1337
-old_roman_numeral 2999
-old_roman_numeral 3000
+puts 'Enter a number: '
+while true
+  input = gets.chomp.to_i
+  if (input > 0 && input <= 3000)
+    break
+  else
+    puts 'Please enter an integer between 1 and 3000: '
+  end
+end
+
+old_roman_numeral input
