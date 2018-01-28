@@ -1,4 +1,4 @@
-# 9.0
+# 9.0a
 
 # Pine's example of ugly code, lots of repetition.
 
@@ -38,6 +38,11 @@ while true
   puts 'Do you wet the bed?'
   answer = gets.chomp.downcase
   if (answer == 'yes' || answer == 'no')
+    if (answer == 'yes')
+      wets_bed = true
+    else
+      wets_bed = false
+    end
     break
   else
     puts 'Please answer "yes" or "no".'
