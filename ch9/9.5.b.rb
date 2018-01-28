@@ -1,5 +1,5 @@
 # 9.5b
-puts "\n\#\# 9.5b \#\#\n\n"
+puts "\n\#\# 9.5b - Old-school Roman Numerals\#\#\n\n"
 
 # Admittedly got stumped and took inspiration from:
 # https://github.com/callahanchris/Learn-to-Program/blob/master/Chapter_09/old_roman_numerals.rb
