@@ -47,14 +47,16 @@ def old_roman_numeral number
   puts "#{number} in old-school Roman numerals is "+"#{thousands}"+"#{hundreds}"+"#{tens}"+"#{ones}"
 end
 
-puts 'Enter a number: '
+# For some reason also exits on letters...
+puts 'Enter a number, or enter 0 to exit: '
 while true
   input = gets.chomp.to_i
   if (input > 0 && input <= 3000)
+    old_roman_numeral input    
+  elsif (input == 0)
+    puts 'Goodbye!'
     break
   else
     puts 'Please enter an integer between 1 and 3000: '
   end
 end
-
-old_roman_numeral input
