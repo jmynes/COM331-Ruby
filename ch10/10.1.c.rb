@@ -6,6 +6,7 @@ puts "\n\#\# 10.1c\#\#\n\n"
 #  visually more dense than "o".
 M = 'land'
 o = 'water'
+
 world = [[o,o,o,o,o,o,o,o,o,o,o],
          [o,o,o,o,M,M,o,o,o,o,o],
          [o,o,o,o,o,o,o,o,M,M,o],
@@ -17,6 +18,7 @@ world = [[o,o,o,o,o,o,o,o,o,o,o],
          [o,o,o,o,o,o,M,M,o,o,o],
          [o,M,o,o,o,M,o,o,o,o,o],
          [o,o,o,o,o,o,o,o,o,o,o]]
+         
 def continent_size world, x, y
   if world[y][x] != 'land'
     #  Either it's water or we already
