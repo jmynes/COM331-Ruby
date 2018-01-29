@@ -1,5 +1,5 @@
 # 10.1a
-puts "\n\#\# 10.1a\#\#\n\n"
+puts "\n\#\# 10.1a \#\#\n\n"
 
 def ask_recursively question
   puts question

@@ -1,5 +1,5 @@
 # 10.1b
-puts "\n\#\# 10.1b\#\#\n\n"
+puts "\n\#\# 10.1b \#\#\n\n"
 
 def factorial num
   if num < 0

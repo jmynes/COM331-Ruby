@@ -1,5 +1,5 @@
 # 10.1c
-puts "\n\#\# 10.1c\#\#\n\n"
+puts "\n\#\# 10.1c \#\#\n\n"
 
 #  These are just to make the map
 #  easier for me to read.  "M" is
@@ -18,7 +18,7 @@ world = [[o,o,o,o,o,o,o,o,o,o,o],
          [o,o,o,o,o,o,M,M,o,o,o],
          [o,M,o,o,o,M,o,o,o,o,o],
          [o,o,o,o,o,o,o,o,o,o,o]]
-         
+
 def continent_size world, x, y
   if world[y][x] != 'land'
     #  Either it's water or we already
