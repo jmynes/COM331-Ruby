@@ -47,9 +47,6 @@ def english_number number
   write = left/10           # How many tens left?
   left  = left - write*10   # Subtract off those tens.
 
-
-
-
   if write > 0
     if ((write == 1) and (left > 0))
       #  Since we can't write "tenty-two" instead of
@@ -73,8 +70,6 @@ def english_number number
       #  So we don't write 'sixtyfour'...
     end
   end
-
-
 
   write = left  #  How many ones left to write out?
   left = 0      #  Subtract off those ones.
