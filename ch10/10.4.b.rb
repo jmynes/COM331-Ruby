@@ -31,6 +31,30 @@ def english_number number
   #  write and left...get it?  :)
   left  = number
 
+  write = left / 1000000000000
+  left = left - write * 1000000000000   # How many trillions left?
+
+  if write > 0
+    trillions = english_number write
+    num_string = num_string + millions + ' trillion'
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+  write = left / 1000000000
+  left = left - write * 1000000000  # How many billions left?
+
+  if write > 0
+    billions = english_number write
+    num_string = num_string + billions + ' billion'
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
   write = left / 1000000
   left = left - write * 1000000   # How many millions left?
 
@@ -114,3 +138,6 @@ puts english_number(1337)
 puts english_number(66666)
 puts english_number(569782)
 puts english_number(2143123)
+puts english_number(23423463)
+puts english_number(756976095)
+puts english_number(6345784538)
