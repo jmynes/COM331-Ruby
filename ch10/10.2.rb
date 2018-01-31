@@ -25,22 +25,25 @@ end
 
 
 def recursive_sort unsorted_array, sorted_array
+  # Start with the assumption the first item is the smallest in the unsorted array
   smallest = unsorted_array[0]
-  puts "Initialized smallest as #{smallest}"
   index = 0 
+
+  # Iterate through the unsorted array 
   while index < unsorted_array.length
-    puts "found #{unsorted_array[index]}"
-    
+    # If the current array index is smaller than the current smallest 
     if (unsorted_array[index] < smallest)
-      puts "Found #{unsorted_array[index]} which is less than #{smallest}"
-      smallest = unsorted_array[index]
+      smallest = unsorted_array[index]  # Reassign smallest
     end
     index += 1
   end
+
+  # Delete the entry in the unsorted list
   unsorted_array.delete_at(unsorted_array.index(smallest))
-  puts "Smallest was #{smallest}, added to sorted array"
+  # Append the smallest to the sorted_array
   sorted_array << smallest
 
+  # Recursively do this until unsorted array is 0
   if unsorted_array.length > 0
     recursive_sort(unsorted_array, sorted_array)
   else
@@ -48,8 +51,7 @@ def recursive_sort unsorted_array, sorted_array
   end
 end
 
-
-
+# Main
 sort unsorted_wordlist
 
 
