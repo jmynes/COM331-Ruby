@@ -6,7 +6,7 @@ puts "\n\#\# 10.5.c - 99 Bottles of Beer on the Wall: Reloaded\#\#\n\n"
 # This works, but could be improved to read and execute better.
 # Lots of ifs in this while loop, I believe some are redundant.
 
-$bottles_of_beer = 99
+$bottles_of_beer = 9999
 $bottle_unit = "bottles"
 
 def take_one_down
@@ -32,7 +32,7 @@ while $bottles_of_beer >= 1
   if $bottles_of_beer == 0
     $bottle_unit = "bottles"
   end
-  
+
   puts $bottles_of_beer.to_s + ' ' + $bottle_unit + ' of beer on the wall!'
   puts
   puts "*Deep breath*"
