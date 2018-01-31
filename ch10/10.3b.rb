@@ -30,6 +30,8 @@ def recursive_sort unsorted_array, sorted_array
   # Iterate through the unsorted array 
   while index < unsorted_array.length
     # If the current array index is smaller than the current smallest 
+    # Downcase because capitals should not matter for sort.
+    # Note that they are still tracked for printing.
     if (unsorted_array[index].downcase < smallest.downcase)
       smallest = unsorted_array[index]  # Reassign smallest
     end
