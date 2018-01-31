@@ -15,15 +15,11 @@ def take_one_down
 end
 
 def refrain
-  #if $bottles_of_beer != 1
-    #$bottle_unit = "bottles"
-  #else
-    #$bottle_unit = "bottle"
-  #end
-
-  #if $bottles_of_beer == 0 
-    #$bottle_unit = "bottles"
-  #end
+  if $bottles_of_beer > 1
+    $bottle_unit = "bottles"
+  else
+    $bottle_unit = "bottle"
+  end
 
   puts $bottles_of_beer.to_s + ' ' + $bottle_unit + ' of beer on the wall, ' + $bottles_of_beer.to_s + ' ' + $bottle_unit + ' of beer!'
   puts
@@ -32,6 +28,11 @@ end
 
 while $bottles_of_beer >= 1
   refrain
+
+  if $bottles_of_beer == 0
+    $bottle_unit = "bottles"
+  end
+  
   puts $bottles_of_beer.to_s + ' ' + $bottle_unit + ' of beer on the wall!'
   puts
   puts "*Deep breath*"
