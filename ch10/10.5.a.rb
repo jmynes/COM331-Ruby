@@ -1,6 +1,6 @@
-# 10.4b
+# 10.5a
 
-puts "\n\#\# 10.4b - English Number (Better Example)\#\#\n\n"
+puts "\n\#\# 10.5a - English Number (Better Example)\#\#\n\n"
 
 def english_number number
   if number < 0   #  No negative numbers
