@@ -1,12 +1,19 @@
 # 10.2
 puts "\n\#\# 10.2 \#\#\n\n"
+unsorted_wordlist = []
 
-def sort some_array  #  This "wraps" recursive_sort.
-  recursive_sort some_array, []
+#def sort some_array  #  This "wraps" recursive_sort.
+#  recursive_sort some_array, []
+#end
+
+puts 'Enter words separated by enter.'
+puts 'An empty line will return a sorted list and exit the program.'
+puts
+
+
+while (entry = gets.chomp) != ''
+  unsorted_wordlist.push entry
 end
 
-def recursive_sort unsorted_array, sorted_array
-  #  Your fabulous code goes here.
-end
+puts unsorted_wordlist.sort
 
-# CONTINUE FROM HERE
