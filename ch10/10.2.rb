@@ -22,7 +22,6 @@ def sort some_array   #  This "wraps" recursive_sort.
   recursive_sort some_array, []
 end
 
-
 def recursive_sort unsorted_array, sorted_array
   # Start with the assumption the first item is the smallest in the unsorted array
   smallest = unsorted_array[0]
