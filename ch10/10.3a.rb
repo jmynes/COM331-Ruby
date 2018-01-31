@@ -29,9 +29,11 @@ def recursive_sort unsorted_array, sorted_array
 
   # Iterate through the unsorted array 
   while index < unsorted_array.length
+    # Generate a new seed each time
+    Random.new_seed
     # If the current array index is smaller than the current smallest 
     word = unsorted_array[index]
-    index = (rand 0..unsorted_array.length) # Shuffle
+    index = (rand 0..unsorted_array.length) # Shuffle, floor of 0, ceiling of array length
   end
 
   # Delete the entry in the unsorted list
