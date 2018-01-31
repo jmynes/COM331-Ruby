@@ -15,9 +15,8 @@ end
 
 sorted_wordlist = unsorted_wordlist.sort
 
-#puts unsorted_wordlist.join(', ')
-#puts sorted_wordlist.sort.join(', ')
-
+puts "Unsorted list:                #{unsorted_wordlist.join(', ')}"
+puts "Sorted list with sort method: #{sorted_wordlist.join(', ')}"
 
 def sort some_array   #  This "wraps" recursive_sort.
   recursive_sort some_array, []
@@ -47,7 +46,7 @@ def recursive_sort unsorted_array, sorted_array
   if unsorted_array.length > 0
     recursive_sort(unsorted_array, sorted_array)
   else
-    puts sorted_array
+    puts "Sorted list manually:         #{sorted_array.join(', ')}"
   end
 end
 
