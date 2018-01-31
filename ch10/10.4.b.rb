@@ -32,7 +32,7 @@ def english_number number
   left  = number
 
   write = left / 1000000
-  left = left - write * 1000000   # How many thousands left?
+  left = left - write * 1000000   # How many millions left?
 
   if write > 0
     millions = english_number write
