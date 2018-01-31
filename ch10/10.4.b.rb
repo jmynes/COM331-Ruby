@@ -31,6 +31,18 @@ def english_number number
   #  write and left...get it?  :)
   left  = number
 
+  write = left / 1000000
+  left = left - write * 1000000   # How many thousands left?
+
+  if write > 0
+    millions = english_number write
+    num_string = num_string + millions + ' million'
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
   write = left / 1000             # How many thousands left?
   left = left - write * 1000
 
@@ -101,3 +113,4 @@ puts english_number(404)
 puts english_number(1337)
 puts english_number(66666)
 puts english_number(569782)
+puts english_number(2143123)
