@@ -53,9 +53,3 @@ end
 
 # Main
 sort unsorted_wordlist
-
-
-
-# Wouldn't this be even better than recursive sort?
-# Cleverness due to: https://stackoverflow.com/a/28414805
-# puts unsorted_wordlist.sort_by(&:swapcase)
