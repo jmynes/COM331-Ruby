@@ -1,5 +1,5 @@
-# 10.2
-puts "\n\#\# 10.2 \#\#\n\n"
+# 10.3b
+puts "\n\#\# 10.3b \#\#\n\n"
 unsorted_wordlist = []
 
 puts 'Enter words separated by enter.'
