@@ -24,28 +24,26 @@ end
 
 def recursive_sort unsorted_array, sorted_array
   # Start with the assumption the first item is the smallest in the unsorted array
-  smallest = unsorted_array[0]
+  word = unsorted_array[0]
   index = 0 
 
   # Iterate through the unsorted array 
   while index < unsorted_array.length
     # If the current array index is smaller than the current smallest 
-    if (unsorted_array[index] < smallest)
-      smallest = unsorted_array[index]  # Reassign smallest
-    end
-    index += 1
+    word = unsorted_array[index]
+    index = (rand 0..unsorted_array.length) # Shuffle
   end
 
   # Delete the entry in the unsorted list
-  unsorted_array.delete_at(unsorted_array.index(smallest))
+  unsorted_array.delete_at(unsorted_array.index(word))
   # Append the smallest to the sorted_array
-  sorted_array << smallest
+  sorted_array << word
 
   # Recursively do this until unsorted array is 0
   if unsorted_array.length > 0
     recursive_sort(unsorted_array, sorted_array)
   else
-    puts "Sorted list manually:         #{sorted_array.join(', ')}"
+    puts "Shuffled list:                #{sorted_array.join(', ')}"
   end
 end
 
