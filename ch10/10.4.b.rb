@@ -30,8 +30,21 @@ def english_number number
   #         writing out right now.
   #  write and left...get it?  :)
   left  = number
-  write = left/100            # How many hundreds left?
-  left  = left - write * 100  #  Subtract off those hundreds.
+
+  write = left / 1000             # How many thousands left?
+  left = left - write * 1000
+
+  if write > 0
+    thousands = english_number write
+    num_string = num_string + thousands + " thousand"
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+  write = left/100              # How many hundreds left?
+  left  = left - write * 100    #  Subtract off those hundreds.
 
   if write > 0
     #  Now here's the recursion:
@@ -40,12 +53,12 @@ def english_number number
 
     if left > 0
       #  So we don't write 'two hundredfifty-one'...
-      num_string = num_string + ' '
+      num_string = num_string + " "
     end
   end
 
-  write = left/10           # How many tens left?
-  left  = left - write*10   # Subtract off those tens.
+  write = left/10             # How many tens left?
+  left  = left - write*10     # Subtract off those tens.
 
   if write > 0
     if ((write == 1) and (left > 0))
@@ -82,12 +95,9 @@ def english_number number
   num_string
 end
 
-puts english_number(  0)
-puts english_number(  9)
-puts english_number( 10)
-puts english_number( 11)
-puts english_number( 17)
-puts english_number( 32)
-puts english_number( 88)
-puts english_number( 99)
-puts english_number(100)
+puts english_number(13)
+puts english_number(42)
+puts english_number(404)
+puts english_number(1337)
+puts english_number(66666)
+puts english_number(569782)
