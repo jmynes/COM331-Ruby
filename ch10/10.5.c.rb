@@ -38,5 +38,3 @@ while $bottles_of_beer >= 1
   puts "*Deep breath*"
   puts
 end
-
-## COME BACK HERE
