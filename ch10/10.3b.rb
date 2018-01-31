@@ -1,4 +1,4 @@
-# 10.2
+# 10.3b
 puts "\n\#\# 10.3b - Updated Sort Dictionary Edition \#\#\n\n"
 
 unsorted_wordlist = []
@@ -30,7 +30,7 @@ def recursive_sort unsorted_array, sorted_array
   # Iterate through the unsorted array 
   while index < unsorted_array.length
     # If the current array index is smaller than the current smallest 
-    if (unsorted_array[index] < smallest)
+    if (unsorted_array[index].downcase < smallest.downcase)
       smallest = unsorted_array[index]  # Reassign smallest
     end
     index += 1
