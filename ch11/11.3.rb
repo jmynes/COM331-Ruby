@@ -12,7 +12,7 @@ test_string = 'I promise that I swear absolutely that ' +
 #  since we are trying to write to it
 File.open filename, 'w' do |f|
   f.write test_string
-end
+end # Ruby knows to close the file here!
 
 read_string = File.read filename
 
