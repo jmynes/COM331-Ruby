@@ -154,7 +154,7 @@ while alive == true && action != 'leave'
   if action == 'leave'
     alive = false
     puts "#{name} eats you, as he does not want you to leave!"
-    puts "#{name} is sad, you are gone despite his best efforts."
+    puts "#{name} is sad, you are gone, despite his best efforts..."
   end
 
   pet.order(action)
