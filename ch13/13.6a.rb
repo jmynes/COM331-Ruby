@@ -32,6 +32,7 @@ class OrangeTree
       if @age > @life_expectancy
         puts "The tree tragically dies at the ripe young age of #{@age}, I knew him well."
         @alive = false
+        height
 
       else
         @height += @age+1
