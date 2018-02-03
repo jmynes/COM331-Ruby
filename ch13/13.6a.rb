@@ -9,7 +9,7 @@ class OrangeTree
     @orange_count     = 0
     @age              = 0
     @alive            = true
-    @life_expectancy  = rand(3..8)
+    @life_expectancy  = rand(3..7)
   end
 
   def height
@@ -23,7 +23,10 @@ class OrangeTree
   end
 
   def one_year_passes
-    if @alive
+    # Max age of 8
+    if @alive && @age <= @life_expectancy
+      puts
+      puts "...ONE YEAR PASSES..."
       @age+=1
 
       if @age > @life_expectancy
@@ -33,11 +36,14 @@ class OrangeTree
       else
         @height += @age+1
         puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
-        if @orange_count > 0
-          @orange_count = 0 # Oranges overripen, fall to the dirt
-          puts "Its old oranges fall to the ground, becoming compost."
+        
+        if @age >= 2
+          if @orange_count > 0
+            @orange_count = 0 # Oranges overripen, fall to the dirt
+            puts "Its old oranges have fallen to the ground, becoming compost for the next generation."
+          end
+          produce_fruit
         end
-        puts
       end
     end
   end
@@ -50,6 +56,9 @@ class OrangeTree
   end
 
   def pick_an_orange
+    puts
+    puts "> Attempting to pick an orange <"
+    puts
     if @orange_count > 0
       puts "You pick the best looking orange from the tree!"
       @orange_count -= 1
@@ -60,39 +69,27 @@ class OrangeTree
   end
 
   def count_the_oranges
-    if @orange_count > 1
+    if @orange_count >= 1
       puts "There are #{@orange_count} oranges left on the tree!"
     else
-      puts 'Be patient, there are no oranges on the tree...'
+      puts 'You\'ll have to wait if you want more oranges, there\'s none left!'
     end
   end
 end
 
 # Tree is born
 tree = OrangeTree.new
-tree.height
-tree.count_the_oranges
 
 # Year 1
 tree.one_year_passes
 
-tree.height
-tree.count_the_oranges
-
 # Year 2, oranges ready!
 tree.one_year_passes
-
-tree.height
-tree.count_the_oranges
-tree.produce_fruit
 7.times{tree.pick_an_orange}
 
 # Year 3
 tree.one_year_passes
-tree.height
-tree.count_the_oranges
-tree.produce_fruit
-5.times{tree.pick_an_orange}
+#5.times{tree.pick_an_orange}
 
-# Year 4-8
-5.times{tree.one_year_passes}
+# Year 4-9, definite death by year 9
+6.times{tree.one_year_passes}
