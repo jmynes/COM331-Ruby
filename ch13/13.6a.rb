@@ -23,12 +23,13 @@ class OrangeTree
 
   def one_year_passes
     if @alive
+      @age+=1
+
       if @age > 5
         puts "The tree tragically dies at the ripe young age of #{@age}, I knew him well."
         @alive = false
 
       else
-        @age += 1
         @height += @age+1
         puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
         if @orange_count > 0
