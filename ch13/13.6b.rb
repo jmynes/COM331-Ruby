@@ -143,15 +143,16 @@ while name == ''
   end
 end
 pet = Dragon.new name
-puts
 
 while alive == true && action != 'leave'
   #counter += 1
   #time_passes counter
+  puts
+  puts 'What do you do?'
   print '> '
   action = gets.chomp.downcase.to_s
   
-  if action == 'leave'
+  if action == 'leave' || action == 'quit' || action == 'exit'
     alive = false
     puts "#{name} eats you, as he does not want you to leave!"
     puts "#{name} is sad, you are gone, despite his best efforts..."
@@ -159,14 +160,3 @@ while alive == true && action != 'leave'
 
   pet.order(action)
 end
-
-
-#pet.feed
-#pet.toss
-#pet.walk
-#pet.put_to_bed
-#pet.rock
-#pet.put_to_bed
-#pet.put_to_bed
-#pet.put_to_bed
-#pet.put_to_bed
