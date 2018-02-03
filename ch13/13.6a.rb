@@ -11,8 +11,10 @@ class OrangeTree
   end
 
   def height
-    if @alive
+    if @alive && @height > 0
       puts "The tree is #{@height} feet tall."
+    elsif @alive && @height == 0
+      puts "The tree was only just planted, It's sprouting!"
     else
       puts 'The tree has hollowed and fallen. It becomes food for future plants.'
     end
