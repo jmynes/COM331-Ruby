@@ -73,6 +73,9 @@ class OrangeTree
     if @orange_count > 0
       puts "You pick the best looking orange from the tree!"
       @orange_count -= 1
+      if @orange_count == 0
+        puts "Hey! That was the last one!"
+      end
       count_the_oranges
     else
       puts "You're being greedy! There aren't any oranges on the tree!!"
