@@ -20,3 +20,20 @@ File.read('birthdays.txt').each_line do|entry|
   #  Put it in the birthday hash!
   birthdays[name] = date
 end
+
+#  Prompt the user for a name of interest
+puts 'Whose birthday would you like to know?'
+#  Allow the user to tYpe HowEver ThEY LikE
+name = gets.chomp.downcase
+date = birthdays[name]
+puts
+
+#  If there was no matching date
+if date == nil
+  puts "I'm not sure! Try Google."
+else
+  #  Undo that downcase I ran on name input
+  #  This would require more work to make the name print correctly...
+  #  Rails has a .titlecase, which would be ideal for this!
+  puts "Their birthday is on: #{(birthdays[name]).capitalize}"
+end
