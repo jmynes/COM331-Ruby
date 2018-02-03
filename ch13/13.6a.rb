@@ -26,10 +26,10 @@ class OrangeTree
       @age += 1
       @height += @age+1
       puts
-      puts "The tree grows by #{@age+1} feet"
+      puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
       if @orange_count > 0
         @orange_count = 0 # Oranges overripen, fall to the dirt
-        puts "Its oranges fall to the ground"
+        puts "Its old oranges fall to the ground, becoming compost."
       end
       puts
     end
