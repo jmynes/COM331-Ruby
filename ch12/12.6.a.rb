@@ -1,5 +1,5 @@
 # 12.6a
-puts "\n\#\# 12.6a \#\#\n\n"
+puts "\n\#\# 12.6a - Roman Numerals to Integers! \#\#\n\n"
 
 # Last relevant code: 9.5c
 
