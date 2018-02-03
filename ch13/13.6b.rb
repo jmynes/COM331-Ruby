@@ -12,6 +12,21 @@ class Dragon
     puts "#{@name} responds to his name!"
   end
 
+  def order action
+    case action
+    when 'feed'
+      feed
+    when 'walk'
+      walk
+    when 'bed'
+      put_to_bed
+    when 'toss'
+      toss
+    when 'rock'
+      rock
+    end
+  end
+
   def feed 
     puts "You feed #{@name}."
     @stuff_in_belly = 10
@@ -141,7 +156,7 @@ while alive == true && action != 'leave'
     puts "#{name} eats you, as he does not want you to leave!"
   end
 
-  #pet.action
+  pet.order(action)
 end
 
 
