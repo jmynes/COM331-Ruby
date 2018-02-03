@@ -14,9 +14,25 @@ class Die
   end
 
   def showing
-    @number_showing
+    puts "You roll a #{@number_showing}"
+  end
+
+  def cheat(side)
+    @number_showing = side
+    if side < 1 || side > 6
+      puts "You can't cheat THAT hard...#{side} is an invalid number on a d6!!"
+      puts "Legitimate roll: #{roll}"
+      puts
+    else
+      puts "You slyly cheat, and the die \"rolls\" a #{side}..."
+      puts
+    end
   end
 
 end
 
-puts Die.new.showing
+die = Die.new
+puts die.showing
+die.cheat(9)
+die.cheat(6)
+puts die.showing
