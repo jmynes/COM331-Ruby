@@ -21,12 +21,19 @@ class OrangeTree
   def one_year_passes
     if @alive
       @height += 1
-      @orange_count = 0 # Oranges overripen, fall to the dirt
+      puts "The tree grows by 1 foot"
+      if @orange_count > 0
+        @orange_count = 0 # Oranges overripen, fall to the dirt
+        puts "Its oranges fall to the ground"
+      end
     end
   end
 
   def produce_fruit
-    @orange_count = @height * 6
+    if @height >= 2
+      @orange_count = @height * 6
+      puts "The tree produces #{@orange_count} oranges, ready for picking!"
+    end
   end
 
   def pick_an_orange
@@ -45,3 +52,17 @@ end
 tree = OrangeTree.new
 tree.height
 tree.count_the_oranges
+
+tree.one_year_passes
+puts
+
+tree.height
+tree.count_the_oranges
+
+tree.one_year_passes
+puts
+
+tree.height
+tree.count_the_oranges
+tree.produce_fruit
+#tree.pick_an_orange
