@@ -5,10 +5,11 @@ class OrangeTree
 
   # IT'S ALIVE!!
   def initialize
-    @height       = 0
-    @orange_count = 0
-    @age          = 0
-    @alive        = true
+    @height           = 0
+    @orange_count     = 0
+    @age              = 0
+    @alive            = true
+    @life_expectancy  = rand(3..8)
   end
 
   def height
@@ -25,7 +26,7 @@ class OrangeTree
     if @alive
       @age+=1
 
-      if @age > 5
+      if @age > @life_expectancy
         puts "The tree tragically dies at the ripe young age of #{@age}, I knew him well."
         @alive = false
 
