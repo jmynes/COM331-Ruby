@@ -1,4 +1,4 @@
-# 12.6a
+# 12.6b
 puts "\n\#\# 12.6b - Birthday Helper \#\#\n\n"
 
 #  Initialize a hash named birthdays
