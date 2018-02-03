@@ -6,7 +6,7 @@ puts "\n\#\# 11.7b \#\#\n\n"
 #  Just for my own convenience, I'll go there now.
 Dir.chdir 'C:/Documents and Settings/Katy/PictureInbox'
 
-#  First we find all of the pictures to me moved.
+#  First we find all of the pictures to be moved.
 pic_names = Dir['F:/**/*.{JPG,jpg}']
 
 puts 'What would you like to call this batch?'
