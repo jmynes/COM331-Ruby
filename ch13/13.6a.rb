@@ -85,7 +85,7 @@ tree.one_year_passes
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
-9.times{tree.pick_an_orange}
+7.times{tree.pick_an_orange}
 
 # Year 3
 tree.one_year_passes
