@@ -9,7 +9,7 @@ class Dragon
     @stuff_in_belly     = 10  #  He's full.
     @stuff_in_intestine =  0  #  He doesn't need to go.
     
-    puts "#{@name} is born."
+    puts "#{@name} responds to his name!"
   end
 
   def feed 
@@ -114,21 +114,33 @@ class Dragon
 end
 
 alive = true
-while alive == true
+action = ''
+
+puts 'You come across a hatchling dragon! What would you like to name it?'
+print '> '
+@name = gets.chomp.capitalize
+pet = Dragon.new @name
+puts
+
+while alive == true && action != 'leave'
   #counter += 1
   #time_passes counter
-  puts "You come across a hatchling dragon! What would you like to name it?"
-  pet = Dragon.new gets.chomp.capitalize
-  alive = false
+  print '> '
+  action = gets.chomp
+  
+  if action == 'leave'
+    alive = false
+    puts "#{@name} eats you, as he does not want you to leave!"
+  end
 end
 
 
-pet.feed
-pet.toss
-pet.walk
-pet.put_to_bed
-pet.rock
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
+#pet.feed
+#pet.toss
+#pet.walk
+#pet.put_to_bed
+#pet.rock
+#pet.put_to_bed
+#pet.put_to_bed
+#pet.put_to_bed
+#pet.put_to_bed
