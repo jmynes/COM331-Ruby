@@ -12,6 +12,7 @@ class OrangeTree
     @life_expectancy  = rand(3..7)
   end
 
+  # Report the tree's height
   def height
     if @alive && @height > 0
       puts "The tree is #{@height} feet tall."
@@ -22,6 +23,12 @@ class OrangeTree
     end
   end
 
+  
+  # A year passes.
+  # if @alive and @age < @life_expectancy age+=1
+    # if @age > @life_expectancy, die and report lack of height
+    # if @age <= @life_expectancy, age += 1, height += (@age + 1), and report height
+      # if @age >= 2, produce_fruit
   def one_year_passes
     # Max age of 8
     if @alive && @age <= @life_expectancy
@@ -46,6 +53,7 @@ class OrangeTree
     end
   end
 
+  # if @age >= 2, lose old fruit (if any) and produce new ones
   def produce_fruit
     if @orange_count > 0
        puts "The #{@orange_count} remaining oranges have since rotten, and fallen to the ground."
@@ -57,6 +65,7 @@ class OrangeTree
     end
   end
 
+  # Pick an orange from the tree, if at least one remains
   def pick_an_orange
     puts
     puts "> Attempting to pick an orange <"
