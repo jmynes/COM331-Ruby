@@ -41,6 +41,7 @@ class OrangeTree
   def pick_an_orange
     puts "You pick the best looking orange from the tree!"
     @orange_count -= 1
+    count_the_oranges
   end
 
   def count_the_oranges
