@@ -37,7 +37,8 @@ class OrangeTree
   end
 
   def pick_an_orange
-
+    puts "You pick the best looking orange from the tree!"
+    @orange_count -= 1
   end
 
   def count_the_oranges
@@ -65,4 +66,4 @@ puts
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
-#tree.pick_an_orange
+tree.pick_an_orange
