@@ -26,7 +26,7 @@ class OrangeTree
   end
 
   def produce_fruit
-
+    @orange_count = @height * 6
   end
 
   def pick_an_orange
@@ -34,6 +34,10 @@ class OrangeTree
   end
 
   def count_the_oranges
-
+    if @orange_count > 1
+      "There are #{@orange_count} oranges on the tree!"
+    else
+      'Be patient, there are no oranges on the tree...'
+    end
   end
 end
