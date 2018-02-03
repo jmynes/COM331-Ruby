@@ -158,6 +158,7 @@ while alive == true && action != 'leave'
     puts "..."
     puts
     puts "Hatchlings are quite intelligent! Here are the actions they understand:"
+    puts
     puts "Feed"
     puts "Walk"
     puts "Bed"
