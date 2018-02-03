@@ -1,5 +1,6 @@
 # 13.3
 puts "\n\#\# 13.3 \#\#\n\n"
+# Would ideally allow the num_sides to be set, maybe later?
 
 # This should likely have a seed...
 class Die
