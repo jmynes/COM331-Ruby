@@ -7,12 +7,12 @@ class Dragon
     @name = name
     @asleep = false
     @stuff_in_belly     = 10  #  He's full.
-    @stuff_in_intestine = 0   #  He doesn't need to go.
-
-    puts "#{name} is born."
+    @stuff_in_intestine =  0  #  He doesn't need to go.
+    
+    puts "#{@name} is born."
   end
 
-  def feed
+  def feed 
     puts "You feed #{@name}."
     @stuff_in_belly = 10
     passage_of_time
@@ -20,10 +20,10 @@ class Dragon
 
   def walk
     puts "You walk #{@name}."
-    @stuff_in_intestine
+    @stuff_in_intestine = 0
     passage_of_time
   end
-
+  
   def put_to_bed
     puts "You put #{@name} to bed."
     @asleep = true
@@ -46,9 +46,9 @@ class Dragon
     puts 'He giggles, which singes your eyebrows.'
     passage_of_time
   end
-
+  
   def rock
-    puts "You rock #{@name} gently"
+    puts "You rock #{@name} gently."
     @asleep = true
     puts 'He briefly dozes off...'
     passage_of_time
@@ -59,8 +59,8 @@ class Dragon
   end
 
   private
-  #  "private" means the methods defined here are
-  #  methods internal to the object. (You can feed your
+  #  "private" means that the methods defined here are
+  #  methods internal to the object.  (You can feed your
   #  dragon, but you can't ask him whether he's hungry.)
 
   def hungry?
@@ -69,35 +69,37 @@ class Dragon
     #  returns true or false, like this:
     @stuff_in_belly <= 2
   end
-
+  
   def poopy?
     @stuff_in_intestine >= 8
   end
 
   def passage_of_time
-    if @stuff_in_belly
+    if @stuff_in_belly > 0
       #  Move food from belly to intestine.
       @stuff_in_belly     = @stuff_in_belly     - 1
       @stuff_in_intestine = @stuff_in_intestine + 1
-    else  #  Our dragon is starving!
+    else
+      #  Our dragon is starving!
       if @asleep
         @asleep = false
         puts 'He wakes up suddenly!'
       end
-      puts "#{@name} is starving! In desparation, he ate YOU!"
+      puts "#{@name} is starving! In desperation, he ate YOU!"
       exit  #  This quits the program.
     end
-
+    
     if @stuff_in_intestine >= 10
       @stuff_in_intestine = 0
-      puts "Whoops! #{@name} had an accident..."
+      puts "Whoops!  #{@name} had an accident..."
     end
-
+    
     if hungry?
       if @asleep
         @asleep = false
         puts 'He wakes up suddenly!'
       end
+      
       puts "#{@name}'s stomach grumbles..."
     end
 
@@ -109,7 +111,6 @@ class Dragon
       puts "#{@name} does the potty dance..."
     end
   end
-
 end
 
 pet = Dragon.new 'Norbert'
@@ -122,25 +123,3 @@ pet.put_to_bed
 pet.put_to_bed
 pet.put_to_bed
 pet.put_to_bed
-
-# LAST FEW LINES OF OUTPUT RECEIVED:
-#Norbert's stomach grumbles...
-#Norbert does the potty dance...
-#You put Norbert to bed.
-#Whoops! Norbert had an accident...
-#He wakes up suddenly!
-#Norbert's stomach grumbles...
-#You put Norbert to bed.
-#He wakes up suddenly!
-#Norbert's stomach grumbles...
-
-# LAST FEW LINES OF OUTPUT EXPECTED
-#Norbert's stomach grumbles...
-#You put Norbert to bed.
-#He wakes up suddenly!
-#Report erratum
-#Norbert's stomach grumbles...
-#Norbert does the potty dance...
-#You put Norbert to bed.
-#He wakes up suddenly!
-#Norbert is starving! In desperation, he ate YOU!
