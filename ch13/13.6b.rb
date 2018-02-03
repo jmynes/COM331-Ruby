@@ -152,7 +152,18 @@ while alive == true && action != 'leave'
   print '> '
   action = gets.chomp.downcase.to_s
   
-  if action == 'leave' || action == 'quit' || action == 'exit'
+  if action == 'help' || action == 'list'
+    puts "#{name} points knowingly at a tablet near the entrance"
+    puts
+    puts "..."
+    puts
+    puts "Hatchlings are quite intelligent! Here are the actions they understand:"
+    puts "Feed"
+    puts "Walk"
+    puts "Bed"
+    puts "Toss"
+    puts "Rock"
+  elsif action == 'leave' || action == 'quit' || action == 'exit'
     alive = false
     puts "#{name} eats you, as he does not want you to leave!"
     puts "#{name} is sad, you are gone, despite his best efforts..."
