@@ -12,9 +12,9 @@ class OrangeTree
 
   def height
     if @alive
-      @height
+      puts "The tree is #{@height} feet tall."
     else
-      'The tree has hollowed and fallen. It becomes food for future plants.'
+      puts 'The tree has hollowed and fallen. It becomes food for future plants.'
     end
   end
 
@@ -35,9 +35,13 @@ class OrangeTree
 
   def count_the_oranges
     if @orange_count > 1
-      "There are #{@orange_count} oranges on the tree!"
+      puts "There are #{@orange_count} oranges on the tree!"
     else
-      'Be patient, there are no oranges on the tree...'
+      puts 'Be patient, there are no oranges on the tree...'
     end
   end
 end
+
+tree = OrangeTree.new
+tree.height
+tree.count_the_oranges
