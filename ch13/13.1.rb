@@ -39,6 +39,7 @@ end
 
 
 # 10.1b's factorial
+# 9.5.c Modern Roman Numerals
 class Integer
   # 10.1b
   def factorial
@@ -48,11 +49,50 @@ class Integer
       self * (self-1).factorial
     end
   end
-end
 
+  # 9.5b
+  def old_roman_numeral
+
+    if self >= 1000
+      thousands = 'M' * (self / 1000)
+    end
+
+    if self >= 100
+      hundreds = (self % 1000) / 100
+      if hundreds >= 5
+        hundreds = 'D' + 'C' * (hundreds - 5)
+      else
+        hundreds = 'C' * ((self % 1000) / 100)
+      end
+    end
+
+    if self >= 10
+      tens = (self % 100) / 10
+      if tens >= 5
+        tens = 'L' + 'X' * (tens - 5)
+      else
+        tens = 'X' * ((self % 100) / 10)
+      end
+    end
+
+    if self >= 1
+      ones = (self % 10) / 1
+      if ones >= 5
+        ones = 'V' + 'I' * (ones - 5)
+      else
+        ones = 'I' * ((self % 10) / 1)
+      end
+    end
+
+    puts "#{self} in old-school Roman numerals is "+"#{thousands}"+"#{hundreds}"+"#{tens}"+"#{ones}"
+  end
+end
 
 # Call my recursive_sort_shuffle method from the Array class
 puts [1,2,3,4,5].shuffle
 
 # Call the author's factorial method from the Integer class
 puts 7.factorial
+
+# Call my old_roman_numeral method from the Integer class
+puts 99.old_roman_numeral
