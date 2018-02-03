@@ -68,41 +68,31 @@ class OrangeTree
   end
 end
 
+# Tree is born
 tree = OrangeTree.new
 tree.height
 tree.count_the_oranges
 
+# Year 1
 tree.one_year_passes
 
 tree.height
 tree.count_the_oranges
 
+# Year 2, oranges ready!
 tree.one_year_passes
 
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
+9.times{tree.pick_an_orange}
 
+# Year 3
 tree.one_year_passes
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
-tree.pick_an_orange
-tree.pick_an_orange
-tree.pick_an_orange
+5.times{tree.pick_an_orange}
 
-tree.one_year_passes
-
-tree.one_year_passes
-
-tree.one_year_passes
-tree.one_year_passes
+# Year 4-8
+5.times{tree.one_year_passes}
