@@ -106,5 +106,5 @@ tree.one_year_passes
 tree.one_year_passes
 2.times{tree.pick_an_orange}
 
-# Year 4-9, definite death by year 9
+# Year 4-8, definite death by year 8
 6.times{tree.one_year_passes}
