@@ -26,17 +26,17 @@ class OrangeTree
       if @age > 5
         puts "The tree tragically dies at the ripe young age of #{@age}, I knew him well."
         @alive = false
-      end
 
-      @age += 1
-      @height += @age+1
-      puts
-      puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
-      if @orange_count > 0
-        @orange_count = 0 # Oranges overripen, fall to the dirt
-        puts "Its old oranges fall to the ground, becoming compost."
+      else
+        @age += 1
+        @height += @age+1
+        puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
+        if @orange_count > 0
+          @orange_count = 0 # Oranges overripen, fall to the dirt
+          puts "Its old oranges fall to the ground, becoming compost."
+        end
+        puts
       end
-      puts
     end
   end
 
@@ -86,3 +86,10 @@ tree.produce_fruit
 tree.pick_an_orange
 tree.pick_an_orange
 tree.pick_an_orange
+
+tree.one_year_passes
+
+tree.one_year_passes
+
+tree.one_year_passes
+tree.one_year_passes
