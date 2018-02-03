@@ -7,6 +7,7 @@ class OrangeTree
   def initialize
     @height       = 0
     @orange_count = 0
+    @age          = 0
     @alive        = true
   end
 
@@ -22,9 +23,10 @@ class OrangeTree
 
   def one_year_passes
     if @alive
-      @height += 1
+      @age += 1
+      @height += @age+1
       puts
-      puts "The tree grows by 1 foot"
+      puts "The tree grows by #{@age+1} feet"
       if @orange_count > 0
         @orange_count = 0 # Oranges overripen, fall to the dirt
         puts "Its oranges fall to the ground"
@@ -34,8 +36,8 @@ class OrangeTree
   end
 
   def produce_fruit
-    if @height >= 2
-      @orange_count = @height * 3
+    if @age >= 2
+      @orange_count = @age * 3
       puts "The tree produces #{@orange_count} oranges, ready for picking!"
     end
   end
