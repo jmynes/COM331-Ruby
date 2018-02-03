@@ -49,3 +49,10 @@ class Integer
     end
   end
 end
+
+
+# Call my recursive_sort_shuffle method from the Array class
+puts [1,2,3,4,5].shuffle
+
+# Call the author's factorial method from the Integer class
+puts 7.factorial
