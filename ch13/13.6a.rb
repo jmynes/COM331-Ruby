@@ -35,7 +35,7 @@ class OrangeTree
 
   def produce_fruit
     if @height >= 2
-      @orange_count = @height * 6
+      @orange_count = @height * 3
       puts "The tree produces #{@orange_count} oranges, ready for picking!"
     end
   end
@@ -66,6 +66,12 @@ tree.count_the_oranges
 
 tree.one_year_passes
 
+tree.height
+tree.count_the_oranges
+tree.produce_fruit
+tree.pick_an_orange
+
+tree.one_year_passes
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
