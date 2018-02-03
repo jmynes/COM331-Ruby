@@ -46,24 +46,3 @@ age.times{
     puts "*#{punch} punch in the arm*"
   end
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-#born = Time.local(1994, 04, 20, 13, 37)
-#one_billion = born + 1000000000
-
-
-
-#puts "I was allegedly born on #{born}"
-#puts "Theoretically making me one billion seconds old on: #{one_billion}"
-
