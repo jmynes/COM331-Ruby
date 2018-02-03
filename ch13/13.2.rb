@@ -1,6 +1,7 @@
 # 13.2
 puts "\n\#\# 13.2 \#\#\n\n"
 
+# This should likely have a seed...
 class Die
 
   def roll
