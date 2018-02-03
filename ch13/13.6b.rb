@@ -113,7 +113,15 @@ class Dragon
   end
 end
 
-pet = Dragon.new 'Norbert'
+alive = true
+while alive == true
+  #counter += 1
+  #time_passes counter
+  puts "You come across a hatchling dragon! What would you like to name it?"
+  pet = Dragon.new gets.chomp.capitalize
+  alive = false
+end
+
 
 pet.feed
 pet.toss
