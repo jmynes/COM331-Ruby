@@ -115,23 +115,33 @@ end
 
 alive = true
 action = ''
+name = ''
 
 puts 'You come across a hatchling dragon! What would you like to name it?'
-print '> '
-@name = gets.chomp.capitalize
-pet = Dragon.new @name
+while name == ''
+  print '> '
+  name = gets.chomp.capitalize
+  if (name == '')
+    puts
+    puts "Don't be shy, you have to name him something!"
+    puts
+  end
+end
+pet = Dragon.new name
 puts
 
 while alive == true && action != 'leave'
   #counter += 1
   #time_passes counter
   print '> '
-  action = gets.chomp
+  action = gets.chomp.downcase.to_s
   
   if action == 'leave'
     alive = false
-    puts "#{@name} eats you, as he does not want you to leave!"
+    puts "#{name} eats you, as he does not want you to leave!"
   end
+
+  #pet.action
 end
 
 
