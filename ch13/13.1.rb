@@ -37,6 +37,15 @@ class Array
   end
 end
 
-# Call my recursive_sort_shuffle method from the Array class
-Array.new.recursive_sort_shuffle(unsorted, holder)
 
+# 10.1b's factorial
+class Integer
+  # 10.1b
+  def factorial
+    if self <= 1
+      1
+    else
+      self * (self-1).factorial
+    end
+  end
+end
