@@ -82,6 +82,7 @@ class OrangeTree
     end
   end
 
+  # How many oranges are left?
   def count_the_oranges
     if @orange_count >= 1
       puts "There are #{@orange_count} oranges left on the tree!"
