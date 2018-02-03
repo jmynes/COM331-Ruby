@@ -24,6 +24,8 @@ class Dragon
       toss
     when 'rock'
       rock
+    else
+      puts "#{@name} is puzzled, you should try the help command!"
     end
   end
 
@@ -152,7 +154,7 @@ while alive == true && action != 'leave'
   print '> '
   action = gets.chomp.downcase.to_s
   
-  if action == 'help' || action == 'list'
+  if action == '' || action == 'help' || action == 'list' || action == '?'
     puts "#{name} points knowingly at a tablet near the entrance"
     puts
     puts "..."
