@@ -23,11 +23,13 @@ class OrangeTree
   def one_year_passes
     if @alive
       @height += 1
+      puts
       puts "The tree grows by 1 foot"
       if @orange_count > 0
         @orange_count = 0 # Oranges overripen, fall to the dirt
         puts "Its oranges fall to the ground"
       end
+      puts
     end
   end
 
@@ -58,13 +60,11 @@ tree.height
 tree.count_the_oranges
 
 tree.one_year_passes
-puts
 
 tree.height
 tree.count_the_oranges
 
 tree.one_year_passes
-puts
 
 tree.height
 tree.count_the_oranges
