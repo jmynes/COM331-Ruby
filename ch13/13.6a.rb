@@ -9,13 +9,20 @@ class OrangeTree
     @orange_count = 0
     @alive        = true
   end
-  
-  def height
 
+  def height
+    if @alive
+      @height
+    else
+      'The tree has hollowed and fallen. It becomes food for future plants.'
+    end
   end
 
   def one_year_passes
-    #age+=1
+    if @alive
+      @height += 1
+      @orange_count = 0 # Oranges overripen, fall to the dirt
+    end
   end
 
   def produce_fruit
