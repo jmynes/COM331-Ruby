@@ -48,7 +48,7 @@ class OrangeTree
 
   def count_the_oranges
     if @orange_count > 1
-      puts "There are #{@orange_count} oranges on the tree!"
+      puts "There are #{@orange_count} oranges left on the tree!"
     else
       puts 'Be patient, there are no oranges on the tree...'
     end
@@ -70,9 +70,12 @@ tree.height
 tree.count_the_oranges
 tree.produce_fruit
 tree.pick_an_orange
+tree.pick_an_orange
 
 tree.one_year_passes
 tree.height
 tree.count_the_oranges
 tree.produce_fruit
+tree.pick_an_orange
+tree.pick_an_orange
 tree.pick_an_orange
