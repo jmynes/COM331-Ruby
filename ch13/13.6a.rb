@@ -35,14 +35,11 @@ class OrangeTree
         height
 
       else
-        @height += @age+1
+        @height += @age + 1
         puts "The tree grows by #{@age+1} feet, and is now #{@age} years old!"
+        height
         
         if @age >= 2
-          if @orange_count > 0
-            @orange_count = 0 # Oranges overripen, fall to the dirt
-            puts "Its old oranges have fallen to the ground, becoming compost for the next generation."
-          end
           produce_fruit
         end
       end
@@ -50,9 +47,13 @@ class OrangeTree
   end
 
   def produce_fruit
+    if @orange_count > 0
+       puts "The #{@orange_count} remaining oranges have since rotten, and fallen to the ground."
+       @orange_count = 0 # Oranges overripen, fall to the dirt
+    end
     if @age >= 2
       @orange_count = @age * 3
-      puts "The tree produces #{@orange_count} oranges, ready for picking!"
+      puts "The tree produces #{@orange_count} new oranges, ready for picking!"
     end
   end
 
@@ -90,7 +91,7 @@ tree.one_year_passes
 
 # Year 3
 tree.one_year_passes
-#5.times{tree.pick_an_orange}
+2.times{tree.pick_an_orange}
 
 # Year 4-9, definite death by year 9
 6.times{tree.one_year_passes}
